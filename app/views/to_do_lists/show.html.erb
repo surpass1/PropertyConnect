@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @to_do_list.name %>
+</p>
+
+<% if can? :edit, @to_do_list %>
+	<%= link_to 'Edit', edit_to_do_list_path(@to_do_list) %> |
+<% end %>
+<%= link_to 'Back', to_do_lists_path %>

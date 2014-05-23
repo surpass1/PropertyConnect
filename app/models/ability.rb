@@ -6,15 +6,17 @@ class Ability
       can :read, :all
     elsif user.role == "admin"
       can :manage, :all
-    elsif user.role == "author"
+    elsif user.role == "registered"
       can :read, :all
-      can :create, ToDoList
-      can :update, ToDoList do |to_do_list|
-        to_do_list.user == user
+      can :create, Property
+      can :update, Property do |property|
+        property.user_id == user_id
       end
-      can :destroy, ToDoList do |to_do_list|
-        to_do_list.user == user
+      can :destroy, Property do |property|
+        property.user_id == user_id
       end
+    else
+      can :show, Property
     end
   end
 end

@@ -1,8 +1,13 @@
-CancanSpike2::Application.routes.draw do
+PropertyConnect::Application.routes.draw do
+  get "home/index"
+
+  resources :properties
+
+
   devise_for :users
 
   resources :to_do_lists
-  root :to => "to_do_lists#index"
+  root :to => "properties#index"
 
 
   # The priority is based upon order of creation:

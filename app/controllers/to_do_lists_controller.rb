@@ -1,5 +1,5 @@
 class ToDoListsController < ApplicationController
-  load_and_authorize_resource
+  #load_and_authorize_resource
   # GET /to_do_lists
   # GET /to_do_lists.json
   def index

@@ -10,10 +10,10 @@ class Ability
       can :read, :all
       can :create, Property
       can :update, Property do |property|
-        property.user_id == user_id
+        property.user == user
       end
       can :destroy, Property do |property|
-        property.user_id == user_id
+        property.user == user
       end
     else
       can :show, Property

@@ -7,7 +7,7 @@ PropertyConnect::Application.routes.draw do
   devise_for :users
 
   resources :to_do_lists
-  root :to => "properties#index"
+  root :to => "home#index"
 
 
   # The priority is based upon order of creation:

@@ -1,2 +1,19 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+	<div class="span5"></div>
+	<div class="span7">
+		<%- model_class = Property -%>
+
+		    <% @properties.in_groups_of(4, false) do |every_six_properties| %>
+		    <div class="row">
+		      <% every_six_properties.each do |property| %>
+		          <div class="form-actions span3">
+		            <p>Title:<%= property.title %></p>
+		            <p>Location:<%= property.location %></p>
+		            <p>Price:<%= property.price %></p>
+		            <p><b>Description:</b><%= property.description %></p>
+		          </div>
+		      <% end %>
+		    </div>
+		<% end %>
+</div>
+ 

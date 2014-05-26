@@ -1,0 +1,80 @@
+<div class="form-actions">
+	<section>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner well-small">
+                <div class=" container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    
+                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                        <ul class="nav pull-right">
+                            <li class="dropdown">
+                                <%= link_to "Home", root_path %>
+                            </li>
+                            <li class="dropdown">
+                                <%= link_to "About us", new_user_session_path %>
+                            </li>
+                            
+                            
+                             <li class="divider"><%= link_to "Sign in", new_user_session_path %></li>
+                            
+     						<%= current_user.email if user_signed_in? %>
+							<% if signed_in? %>
+							<li class="dropdown">
+                               <%= link_to "Manage Property", properties_path %>
+                            </li>
+                            <li class="dropdown">
+                               <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+                            </li>
+                            <% end %>
+                            
+                           
+                        </ul>
+                    </div>
+                    <div <a class="brand">Property Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!--Tabbed menu-->
+
+	<br/>
+	<section >
+		<div class="top-nav container">
+			<div class="row">
+				<div class="span2">
+					<a class="img-circle"><%= image_tag( "logo.png")%></a>
+				</div>
+				<div class="span4">
+					<p class="notice"><%= notice %></p>
+			        <p class="alert"><%= alert %></p>
+				</div>
+				<div class="span3">
+					<p>
+						Manage<small> and find property</small>
+					</p>
+					<form class="form-search">
+						<div class="input-append">
+							<input type="text" class="span2 search-query" placeholder="search property ...">
+							<button type="submit" class="btn">Search</button>
+						</div>
+					</form>
+				</div>
+				<div class="span3">
+					
+							<span class="text-right"></span>
+							<p>
+								Your choice <small>(New properties on the market)</small>
+							</p>
+							<p>
+								 <a class="btn btn-sm btn-success btn-block" href="#">Checkout</a>
+							</p>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

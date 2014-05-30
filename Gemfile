@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+#gem 'rails', '3.2.9'
+gem 'rails', '3.2.18'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,6 +10,15 @@ gem 'rails', '3.2.9'
 
 gem "devise"
 gem "cancan"
+
+gem "nokogiri"
+
+
+gem 'paperclip', '~> 4.1.1'
+
+gem 'paginate', '~> 3.0.0'
+#for the search engine
+gem 'elasticsearch-rails', '~> 0.1.2'
 
 gem "twitter-bootstrap-rails"
 

@@ -12,6 +12,11 @@
   <dd><%= @property.price %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @property.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Image) %>:</strong></dt>
+  <dd><%= image_tag @property.avatar.url %>
+      <%= image_tag @property.avatar.url(:medium) %>
+      <%= image_tag @property.avatar.url(:thumb) %>
+  </dd>
 </dl>
 
 <div class="form-actions">

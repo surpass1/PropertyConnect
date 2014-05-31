@@ -1,4 +1,7 @@
 PropertyConnect::Application.routes.draw do
+  resources :categories
+
+
   get "home/index"
 
   resources :properties

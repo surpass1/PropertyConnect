@@ -9,6 +9,7 @@
 		          <div class="form-actions span3">
 		            <p>Title:<%= property.title %></p>
 		            <p>Location:<%= property.location %></p>
+		            <p><%= image_tag property.avatar.url(:thumb) %></p>
 		            <p>Price:<%= property.price %></p>
 		            <p><b>Description:</b><%= property.description %></p>
 		          </div>

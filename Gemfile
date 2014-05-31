@@ -20,10 +20,13 @@ gem 'paginate', '~> 3.0.0'
 #for the search engine
 gem 'elasticsearch-rails', '~> 0.1.2'
 
+gem 'paperclip-dropbox'
+
 gem "twitter-bootstrap-rails"
 
 group :development do
     gem 'sqlite3'
+    gem 'pry'
 end
 
 # Gems used only for assets and not required

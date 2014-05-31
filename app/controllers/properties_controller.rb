@@ -1,10 +1,11 @@
 class PropertiesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show] 
+  before_filter :authenticate_user!, :except => [:show]
+  before_filter :logged_in_user 
   #load_and_authorize_resource :except => [:show]
 
   
   def index
-    @properties = Property.all
+    @properties = @user.properties.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -39,8 +40,7 @@ class PropertiesController < ApplicationController
 
 
   def create
-    @property = Property.new(params[:property])
-
+    @property = @user.properties.new(params[:property])
     respond_to do |format|
       if @property.save
         format.html { redirect_to @property, notice: 'Property was successfully created.' }
@@ -76,5 +76,10 @@ class PropertiesController < ApplicationController
       format.html { redirect_to properties_url }
       format.json { head :no_content }
     end
+  end
+
+  private 
+  def logged_in_user
+    @user = current_user
   end
 end

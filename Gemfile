@@ -24,6 +24,8 @@ gem 'paperclip-dropbox'
 
 gem "twitter-bootstrap-rails"
 
+gem 'bootstrap-sass', '~> 3.0.0.0.rc2'
+
 group :development do
     gem 'sqlite3'
     gem 'pry'

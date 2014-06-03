@@ -1,18 +1,21 @@
 <div class="row">
-	<div class="span5"></div>
-	<div class="span7">
+	<div class="span4"></div>
+	<div class="span8">
 		<%- model_class = Property -%>
 
 		    <% @properties.in_groups_of(4, false) do |every_six_properties| %>
 		    <div class="row">
 		      <% every_six_properties.each do |property| %>
-		          <div class="form-actions span3">
-		            <p>Title:<%= property.title %></p>
+		          <div class="span2">
+		          	<p><%=  image_tag property.avatar.url(:thumb) %></p>
+
+		          	<p>Title:<%= property.title %></p>
 		            <p>Location:<%= property.location %></p>
-		            <p><%= image_tag property.avatar.url(:thumb) %></p>
 		            <p>Price:<%= property.price %></p>
 		            <p><b>Description:</b><%= property.description %></p>
+		            <hr class="light">
 		          </div>
+
 		      <% end %>
 		    </div>
 		<% end %>

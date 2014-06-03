@@ -1,17 +1,22 @@
 PropertyConnect::Application.routes.draw do
   resources :categories
 
-
-  get "home/index"
+  root :to => "home#index"
 
   resources :properties
 
 
-  devise_for :users
+  devise_for :users do
+    get 'users', :to => 'profile#show'
+  end
 
-  resources :to_do_lists
-  root :to => "home#index"
+  resources :profile
 
+  get 'about', :to => 'home#about'
+
+  
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

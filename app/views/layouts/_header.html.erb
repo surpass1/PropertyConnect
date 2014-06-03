@@ -15,7 +15,7 @@
                                 <%= link_to "Home", root_path %>
                             </li>
                             <li class="dropdown">
-                                <%= link_to "About us", new_user_session_path %>
+                                <%= link_to "About us", about_path %>
                             </li>
                             
                             
@@ -26,8 +26,12 @@
 							<li class="dropdown">
                                <%= link_to "Manage Property", properties_path %>
                             </li>
+
                             <li class="dropdown">
-                               <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+                               <%= link_to "My account", profile_path(current_user.id), :method => :get %>
+                            </li>
+                            <li class="dropdown">
+                               <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => :offset1  %>
                             </li>
                             <% end %>
                             
@@ -49,8 +53,10 @@
 					<a class="img-circle"><%= image_tag( "logo.png")%></a>
 				</div>
 				<div class="span4">
-					<p class="notice"><%= notice %></p>
-			        <p class="alert"><%= alert %></p>
+					<p class="alert well-small"><%= alert %></p>
+					
+						<p class="notice 	"><%= notice %></p>
+			        
 				</div>
 				<div class="span3">
 					<p>
@@ -70,7 +76,8 @@
 								Your choice <small>(New properties on the market)</small>
 							</p>
 							<p>
-								 <a class="btn btn-sm btn-success btn-block" href="#">Checkout</a>
+								 <%= link_to "Check out new Houses and Land", root_path, :class => :btn %>
+
 							</p>
 					
 				</div>

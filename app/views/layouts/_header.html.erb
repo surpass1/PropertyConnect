@@ -20,8 +20,9 @@
                             
                             
                              <li class="divider"><%= link_to "Sign in", new_user_session_path %></li>
+                             <li class="divider"><%= link_to "Sign up", new_user_registration_path %></li>
                             
-     						<%= current_user.email if user_signed_in? %>
+     						
 							<% if signed_in? %>
 							<li class="dropdown">
                                <%= link_to "Manage Property", properties_path %>
@@ -53,6 +54,7 @@
 					<a class="img-circle"><%= image_tag( "logo.png")%></a>
 				</div>
 				<div class="span4">
+					<p class="text-success"><%= current_user.email if user_signed_in? %></p>
 					<p class="alert well-small"><%= alert %></p>
 					
 						<p class="notice 	"><%= notice %></p>

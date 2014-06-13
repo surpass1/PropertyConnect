@@ -9,10 +9,16 @@
 <body>
 	<%= render 'layouts/header'%>
 	<div class="container">
-		<div class="row">
-			
+				
 		<%= yield %>
 	</div>
 	<%= render 'layouts/footer'%>
+
+	<script type="text/javascript">
+            $('.carousel').carousel({
+            interval: 2000
+            })
+
+    </script>
 </body>
 </html>

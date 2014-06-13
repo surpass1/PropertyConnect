@@ -1,23 +1,67 @@
-<div class="row">
-	<div class="span4"></div>
-	<div class="span8">
-		<%- model_class = Property -%>
+<%= render 'home/slider'%>
+<div class="span8">
 
-		    <% @properties.in_groups_of(4, false) do |every_six_properties| %>
-		    <div class="row">
-		      <% every_six_properties.each do |property| %>
-		          <div class="span2">
-		          	<p><%=  image_tag property.avatar.url(:thumb) %></p>
+	<div class="row">
+		<div class="span3">
+			
+            <div id="myCarousel" class="carousel slide">
+				<!-- Carousel items -->
+				<div class="carousel-inner">
+					<div class="active item">
+						<%= image_tag( "images_5.jpg") %>
+					</div>
+					<div class="item">
+						<%= image_tag( "images_7.jpg") %>
+					</div>
+					<div class="item">
+						<%= image_tag( "images_8.jpg") %>
+					</div>
+				</div>
+				<!-- Carousel nav 
+				<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
 
-		          	<p>Title:<%= property.title %></p>
-		            <p>Location:<%= property.location %></p>
-		            <p>Price:<%= property.price %></p>
-		            <p><b>Description:</b><%= property.description %></p>
-		            <hr class="light">
-		          </div>
+			</div>
+	    </div>
+	</div>
 
-		      <% end %>
-		    </div>
-		<% end %>
+	<div class="row">
+		
+		<div class="span12">
+			<%- model_class = Property -%>
+
+			    <% @properties.in_groups_of(5, false) do |every_six_properties| %>
+			    <div class="row">
+			      <% every_six_properties.each do |property| %>
+			          <div class="span2" style="margin-left:5px">
+
+						  <div class="thumbnail">
+						  	<i class="tag"></i>
+				          	<p><%=  image_tag property.avatar.url(:medium) %></p>
+				          	<div class="caption">
+					          	<h5><%= property.title %></h5>
+					          	<p>Location:<%= property.location %></p>
+					          	<p><span class="">$<%= property.price %></span></p>
+					          	<h4><a class="btn btn-block"> VIEW</a></h4>
+					            
+					            
+					            </b><%= property.description %>
+					        </div>
+					      </div>
+			            
+			          </div>
+
+			      <% end %>
+			    </div>
+			<% end %>
+			
+		</div>
+	</div>
+	</div>
+  </div>
 </div>
+
+	
+ 
+
  

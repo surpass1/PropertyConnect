@@ -11,29 +11,32 @@
                     
                     <div class="nav-collapse collapse navbar-responsive-collapse">
                         <ul class="nav pull-right">
-                            <li class="dropdown">
-                                <%= link_to "Home", root_path %>
-                            </li>
-                            <li class="dropdown">
-                                <%= link_to "About us", about_path %>
-                            </li>
-                            
-                            
-                             <li class="divider"><%= link_to "Sign in", new_user_session_path %></li>
-                             <li class="divider"><%= link_to "Sign up", new_user_registration_path %></li>
-                            
+                                                     
      						
 							<% if signed_in? %>
 							<li class="dropdown">
-                               <%= link_to "Manage Property", properties_path %>
-                            </li>
+	                               <%= link_to "Manage Property", properties_path %>
+	                            </li>
 
-                            <li class="dropdown">
-                               <%= link_to "My account", profile_path(current_user.id), :method => :get %>
-                            </li>
-                            <li class="dropdown">
-                               <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => :offset1  %>
-                            </li>
+	                            <li class="dropdown">
+	                               <%= link_to "My account", profile_path(current_user.id), :method => :get %>
+	                            </li>
+	                            <li class="dropdown">
+	                               <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => :offset1  %>
+	                            </li>
+	                        <% else %>
+
+	                            <li class="dropdown">
+	                                <%= link_to "Home", root_path %>
+	                            </li>
+	                            <li class="dropdown">
+	                                <%= link_to "About us", about_path %>
+	                            </li>
+	                            
+	                            
+	                             <li class="divider"><%= link_to "Sign in", new_user_session_path %></li>
+	                             <li class="divider"><%= link_to "Sign up", new_user_registration_path %></li>
+
                             <% end %>
                             
                            

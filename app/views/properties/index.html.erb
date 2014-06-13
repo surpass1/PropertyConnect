@@ -7,7 +7,7 @@
   <div class="span4">
     <% if can? :create, Property %>
         <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_property_path, :class => 'btn btn-block' %>
+            new_property_path, :class => 'btn btn-success btn-block' %>
     <% end %>
   </div>
 </div>
@@ -19,7 +19,6 @@
       <th><%= model_class.human_attribute_name(:location) %></th>
       <th><%= model_class.human_attribute_name(:price) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:avatar) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -32,7 +31,6 @@
         <td><%= property.location %></td>
         <td><%= property.price %></td>
         <td><%= property.description %></td>
-        <td><%= property.avatar %></td>
         <td><%=l property.created_at %></td>
         <td>
           

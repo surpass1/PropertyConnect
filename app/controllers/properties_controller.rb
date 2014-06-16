@@ -5,12 +5,17 @@ class PropertiesController < ApplicationController
 
   
   def index
-    @properties = @user.properties.all
+    if params[:search]
+      @properties = @user.properties.search(params[:search]).order("created_at DESC")
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @properties }
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @properties }
+      end
+    else
+      @properties = Property.order("created_at DESC")
     end
+
   end
 
   

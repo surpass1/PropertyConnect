@@ -1,0 +1,14 @@
+<div class = "well">
+	<p>
+		<% if(@title && @price && @image_url)  %>
+		  <ul>
+		    <% @title.zip(@price, @image_url).each do |t, p, i| %>
+		      <li><%= t %></li>
+		      <li><%= i %></li>
+		      <li><%= p %></li>
+		    <% end %>
+		  </ul>
+		<% end %>
+	</p>
+	
+</div>

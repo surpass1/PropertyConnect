@@ -13,6 +13,8 @@ gem "cancan"
 
 gem "nokogiri"
 
+gem 'mechanize'
+
 
 gem 'paperclip', '~> 4.1.1'
 

@@ -1,4 +1,6 @@
 PropertyConnect::Application.routes.draw do
+  get "scrape/index"
+
   resources :categories
 
   root :to => "home#index"

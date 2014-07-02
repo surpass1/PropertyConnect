@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 	redirect_to login_url,
 	:alert => "Please log in to continue."
 	else
+		
 	if request.env["HTTP_REFERER"].present?
 	redirect_to :back, :alert => exception.message
 	else

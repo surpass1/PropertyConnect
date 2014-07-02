@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
-   before_filter :authenticate_user!, :except => [:show, :index]
+   
    def index
     if params[:search]
-      @properties = properties..search(params[:search]).order("created_at DESC")
-
+      @properties = @user.properties.search(params[:search], params[:page]).order("created_at DESC")
+      
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @properties }
@@ -17,4 +17,6 @@ class HomeController < ApplicationController
     end
 
   end
+
+
 end

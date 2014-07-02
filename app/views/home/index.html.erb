@@ -28,32 +28,36 @@
 	<div class="row">
 		
 		<div class="span12">
-			<%- model_class = Property -%>
+				
+					<%- model_class = Property -%>
+						
+					    <% @properties.in_groups_of(5, false) do |every_six_properties| %>
+					    <div class="row">
+					    	
+					      <% every_six_properties.each do |property| %>
+					          <div class="span2" style="margin-left:5px">
 
-			    <% @properties.in_groups_of(5, false) do |every_six_properties| %>
-			    <div class="row">
-			      <% every_six_properties.each do |property| %>
-			          <div class="span2" style="margin-left:5px">
-
-						  <div class="thumbnail">
-						  	<i class="tag"></i>
-				          	<p><%=  image_tag property.avatar.url(:medium) %></p>
-				          	<div class="caption">
-					          	<h5><%= property.title %></h5>
-					          	<p>Location:<%= property.location %></p>
-					          	<p><span class="">$<%= property.price %></span></p>
-					          	<h4><a class="btn btn-block"> VIEW</a></h4>
+								  <div class="thumbnail">
+								  	<i class="tag"></i>
+						          	<p><%=  image_tag property.avatar.url(:medium) %></p>
+						          	<div class="caption">
+							          	<h5><%= property.title %></h5>
+							          	<p>Location:<%= property.location %></p>
+							          	<p><span class="">$<%= property.price %></span></p>
+							          	<h4><a class="btn btn-block"> VIEW</a></h4>
+							            
+							            
+							            </b><%= property.description %>
+							        </div>
+							      </div>
 					            
-					            
-					            </b><%= property.description %>
-					        </div>
-					      </div>
-			            
-			          </div>
+					          </div>
 
-			      <% end %>
-			    </div>
-			<% end %>
+					      <% end %>
+					    </div>
+
+					<% end %>
+				
 			
 		</div>
 	</div>

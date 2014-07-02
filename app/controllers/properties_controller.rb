@@ -6,7 +6,8 @@ class PropertiesController < ApplicationController
   
   def index
     if params[:search]
-      @properties = @user.properties.search(params[:search]).order("created_at DESC")
+      @properties = @user.properties.search(params[:search], params[:page]).order("created_at DESC")
+      
 
       respond_to do |format|
         format.html # index.html.erb

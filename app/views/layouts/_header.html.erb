@@ -19,6 +19,11 @@
 	                        <li class="<%= 'activen' if current_page?(scrape_index_path) %>">
 	                            	<%= link_to "Scrape", scrape_index_path %>
 	                        </li>
+
+
+	                        <li class="<%= 'activen' if current_page?(scrape_soads_path) %>">
+	                            	<%= link_to "Soads", scrape_soads_path %>
+	                        </li>
 							<% if signed_in? %>
 							<li class="dropdown">
 	                               <%= link_to "Manage Property", properties_path %>
@@ -67,7 +72,7 @@
     </section>
 	<!--Tabbed menu-->
 
-	<br/>
+	<div style="margin-top:30px;"></div>
 	<section >
 		<div class="top-nav container">
 			<div class="row">
@@ -77,6 +82,7 @@
 				<div class="span4">
 					<p>
 						Your choice <small>(New properties on the market)</small>
+						
 					</p>
 				</div>
 				
@@ -95,7 +101,12 @@
 					<p>
 						Manage<small> and find property</small>
 					</p>
-										
+					<% form_tag request.path, :method => 'get' do %>
+						  <% content_tag :label do %>
+						    Search term:
+						    <%= text_field_tag :search, params[:search] %>
+						  <% end %>
+						<% end %>					
 				</div>
 			</div>
 		</div>

@@ -10,4 +10,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   
   has_many :properties
+
+  #These are the Roles that are available for use.
+  ROLES = %w[admin notadmin]
 end

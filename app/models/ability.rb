@@ -2,24 +2,23 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    if user.nil?
-      can :read, :all
-    elsif user.role == "admin"
-      can :manage, :all
-    elsif user.role == "registered"
-      can :read, :all
-      can :create, Property
-
-      can :update, Property do |property|
-        property.user == user
-      end
-
-      can :destroy, Property do |property|
-        property.user == user
-      end
-      
-    else
-      can :show, Property
-    end
-  end
+   user ||= User.new # guest user
+    
+   if user.role == "admin"
+          can :manage, :all
+   else
+     #can :read, :all #An example of using this would be to allow guest users to read a blog entry but not edit it
+    
+     can [:create, :upate], Authentication
+    
+     if user.role == "notadmin"
+        can [:edit, :update, :delete], User do |u|
+          u.try(:id) == user.id #This ensures that a user with role "notadmin" can only edit their own profile
+        end
+     end
+    
+   end
+   #end
 end
+
+ 

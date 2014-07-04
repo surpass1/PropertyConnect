@@ -15,6 +15,8 @@ gem "nokogiri"
 
 gem 'mechanize'
 
+gem 'rest-client'
+
 
 gem 'paperclip', '~> 4.1.1'
 

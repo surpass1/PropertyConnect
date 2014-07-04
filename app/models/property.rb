@@ -30,31 +30,21 @@ end
   end
 
   def scrape
-    item_name= Array.new
-    price = Array.new
-    #image_url = Array.new
-
-    url = "http://search.knightfrank.ug/property-for-sale/uganda"
-    doc = Nokogiri::HTML(open(url))
-
-    #scrapping the item name
-    item_name = doc.xpath("//div/a/div/h2").collect {|node| node.text.strip}
-
-    #scrapping the price of the property
-    price = doc.css(".priceTop").collect {|n| n.text.strip}
-
-    #scrapping the image
-    #image_url = doc.css("img").collect {|n| n.to_s.strip}
-
-    item_name.zip(price).each do |name, p|
-      puts name
-      puts p
-      puts ""
-
-      hello = Property.new(title: item_name, p: price)
-      hello.save
-    end
+    url = "http://www.nhcc.co.ug/"
+      doc = Nokogiri::HTML(open(url))
     
+    title = []
+    price = []
     
-  end
+    title = doc.xpath("//div/h4").collect {|node| node.text.strip}
+    price = doc.css(".ns2-introtext").collect {|node| node.text.strip}
+    puts title
+    puts price
+
+    #Property.create(:title => title, :price => price)
+
+    nhcc = Property.new(title: @title, price: @price)
+    nhcc.save
+
+ end
 end

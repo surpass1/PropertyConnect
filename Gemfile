@@ -27,6 +27,8 @@ gem "will_paginate-bootstrap"
 #for the search engine
 gem 'elasticsearch-rails', '~> 0.1.2'
 
+gem 'rufus-scheduler'
+
 gem 'paperclip-dropbox'
 
 gem "twitter-bootstrap-rails"

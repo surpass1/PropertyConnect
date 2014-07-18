@@ -129,6 +129,8 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rufus-scheduler (3.0.8)
+      tzinfo
     sass (3.2.4)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -182,6 +184,7 @@ DEPENDENCIES
   pry
   rails (= 3.2.18)
   rest-client
+  rufus-scheduler
   sass-rails (~> 3.2.3)
   sqlite3
   twitter-bootstrap-rails

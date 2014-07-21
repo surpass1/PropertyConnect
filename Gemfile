@@ -12,28 +12,29 @@ gem "devise"
 gem "cancan"
 
 gem "nokogiri"
-
 gem 'mechanize'
 
 gem 'rest-client'
-
-
 gem 'paperclip', '~> 4.1.1'
 
 gem 'will_paginate'
-
 gem "will_paginate-bootstrap"
 #gem 'paginate', '~> 3.0.0'
 #for the search engine
 gem 'elasticsearch-rails', '~> 0.1.2'
 
 gem 'rufus-scheduler'
-
 gem 'paperclip-dropbox'
 
 gem "twitter-bootstrap-rails"
-
+gem 'therubyracer'
 #gem 'bootstrap-sass', '~> 3.0.0.0.rc2'
+
+gem 'rails_admin'
+
+#for searching 
+gem 'sunspot_rails'
+gem 'sunspot_solr' 
 
 group :development do
     gem 'sqlite3'

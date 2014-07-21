@@ -12,33 +12,36 @@
                     <div class="nav-collapse collapse navbar-responsive-collapse">
                         <ul class="nav nav-tabs pull-right">
                                                      
-     						<li class="<%= 'activen' if current_page?(root_path) %>">
+     						<li class="<%= 'active' if current_page?(root_path) %>">
 	                            	<%= link_to "Home", root_path %>
 	                        </li>
 
-	                        <li class="<%= 'activen' if current_page?(scrape_soads_path) %>">
+	                        <li class="<%= 'active' if current_page?(scrape_soads_path) %>">
 	                            	<%= link_to "Soads", scrape_soads_path %>
 	                        </li>
 							<% if signed_in? %>
-							<li class="dropdown">
+								<li class="<%= 'active' if current_page?(properties_path) %>">
 	                               <%= link_to "Manage Property", properties_path %>
 	                            </li>
 
-	                            <li class="dropdown">
+	                            <li class="">
 	                               <%= link_to "My account", profile_path(current_user.id), :method => :get %>
 	                            </li>
-	                            <li class="dropdown">
+	                            <li class="<%= 'active' if current_page?(destroy_user_session_path) %>">
 	                               <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => :offset1  %>
 	                            </li>
 	                        <% else %>
 
-	                            <li class="dropdown">
+	                            <li class="<%= 'active' if current_page?(about_path) %>">
 	                                <%= link_to "About us", about_path %>
 	                            </li>
 	                            
-	                            
-	                             <li class="divider"><%= link_to "Sign in", new_user_session_path %></li>
-	                             <li class="divider"><%= link_to "Sign up", new_user_registration_path %></li>
+	                            <li class="<%= 'active' if current_page?(new_user_session_path) %>">
+	                             	<%= link_to "Sign in", new_user_session_path %>
+	                            </li>
+	                            <li class="<%= 'active' if current_page?(new_user_registration_path) %>">
+	                             	<%= link_to "Sign up", new_user_registration_path %>
+	                            </li>
 
                             <% end %>
                           

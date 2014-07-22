@@ -31,6 +31,7 @@ gem 'therubyracer'
 #gem 'bootstrap-sass', '~> 3.0.0.0.rc2'
 
 gem 'rails_admin'
+gem 'blogit'
 
 #for searching 
 gem 'sunspot_rails'

@@ -5,10 +5,8 @@
   </div>
 
   <div class="span4">
-    <% if can? :create, Property %>
-        <%= link_to t('.new', :default => t("helpers.links.new")),
+    <%= link_to t('.new', :default => t("helpers.links.new")),
             new_property_path, :class => 'btn btn-success btn-block' %>
-    <% end %>
   </div>
 </div>
 <table class="table table-striped">

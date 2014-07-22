@@ -1,15 +1,19 @@
 PropertyConnect::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
+  mount Blogit::Engine => "/blog"
+
   get "scrape/index"
 
   get "scrape/soads"
+  get "home/show"
 
   resources :categories
 
   root :to => "home#index"
 
   resources :properties
+
 
 
   devise_for :users do

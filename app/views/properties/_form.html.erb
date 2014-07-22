@@ -1,7 +1,22 @@
 <%= form_for @property, :html => {:multipart => true, :class => 'form-horizontal' } do |f| %>
+
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+       <h2><%= pluralize(@property.errors.count, "error") %> prohibited this message from being saved:</h2>
+       <ul>
+         <% @property.errors.full_messages do |msg| %>
+         <% #Should have been: @location.errors.full_messages.each do |msg| %>
+         <li>
+           <%= msg %>
+         </li>
+         <% end %>
+       </ul>
+    </div>
+  <% end %>
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
+      <%= f.select :title, options_for_select(["Land", "House", "other"]) %>
       <%= f.text_field :title, :class => 'text_field' %>
     </div>
   </div>

@@ -19,7 +19,7 @@ class Property < ActiveRecord::Base
 
   validates_attachment :avatar, presence: true, 
                         content_type: { content_type: [ 'avatar/jpeg', 'avatar/jpg', 'avatar/png', 'avatar/gif' ] },
-                        size: { less_than: 5.megabytes }
+                        size: { less_than: 2.megabytes }
 
 
   def self.search(search, page)

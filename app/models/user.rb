@@ -27,5 +27,5 @@ class User < ActiveRecord::Base
     roles.include?(role.to_s)
   end
 
-  #blogs
+  blogs()
 end

@@ -25,19 +25,5 @@ class ScrapeController < ApplicationController
   def make_absolute( href, root )
   	URI.parse(root).merge(URI.parse(href)).to_s
   end
-
-  def soads
-  	uri = URI('http://www.ugandainvest.go.ug/businessideas/index.php/2013-10-22-11-22-19/establishing-a-way-side-restaurant')
-	html = Net::HTTP.get(uri)
-	document = Nokogiri::HTML(html)
-
-	  @image_url = URI(document.css('img').get_attribute(:src))
-	  @image = Net::HTTP.get(@image_url) #downloading the image, this will take some time
-	  @picture_file = File.open("#{location.delete(' ')}_photo.jpeg", 'wb')
-	  @picture_file.write(@image)
-	  @picture_file.close()
-	  
-  end
-
 end
 

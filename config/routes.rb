@@ -14,8 +14,6 @@ PropertyConnect::Application.routes.draw do
 
   resources :properties
 
-
-
   devise_for :users do
     get 'users', :to => 'profile#show'
   end

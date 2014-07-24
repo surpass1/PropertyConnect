@@ -1,40 +1,54 @@
 
-<div class="span8">
 
-	<div class="row">
-		<div class="span3">
-			
-            <div id="myCarousel" class="carousel slide fill">
-				<!-- Carousel items -->
-				<div class="carousel-inner" style ="width:100%;height:100%;background-position:center;background-size:cover;">
-					<div class="active item">
-						<%= image_tag( "images_5.jpg", :size => 's500X500') %>
-					</div>
-					<div class="item">
-						<%= image_tag( "images_7.jpg") %>
-					</div>
-					<div class="item">
-						<%= image_tag( "images_8.jpg") %>
-					</div>
-				</div>
-				<!-- Carousel nav 
-				<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
 
+	<div class="row-fluid">
+		<div class="span10">
+			<div class="row-fluid">
+				<div class="span3" style="margin-left:5px;">
+				    <ul class="nav nav-tabs nav-stacked">
+						<li class="nav-header">Categories</li>
+						<li><a href="/">Rent</a></li>
+						<li><a href="#">Sale</a></li>
+						<li><a href="#">Lease</a></li>
+						<li><a href="#">Others</a></li>
+					</ul>
+				 	
+			    </div>
+			    <div class="span5 well">
+			    	
+			    </div>
+				<div class="span3">
+					
+		            <div id="myCarousel" class="carousel slide fill">
+						<!-- Carousel items -->
+						<div class="carousel-inner" style ="width:100%;height:100%;background-position:center;background-size:cover;">
+							<div class="active item">
+								<%= image_tag( "images_5.jpg", :size => 's500X500') %>
+							</div>
+							<div class="item">
+								<%= image_tag( "images_7.jpg") %>
+							</div>
+							<div class="item">
+								<%= image_tag( "images_8.jpg") %>
+							</div>
+						</div>
+						<!-- Carousel nav 
+						<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+						<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
+
+					</div>
+			    </div>
+			    
 			</div>
-	    </div>
-	</div>
-
-	<div class="row">
-		
-		<div class="span12">
+			<br/>
+			<div class="row-fluid">
+				<div class="span12">
 				
 					<%- model_class = Property -%>
 						
 					    <% @properties.in_groups_of(5, false) do |every_six_properties| %>
-					    <div class="row">
-					    	
-					      <% every_six_properties.each do |property| %>
+					    <div class="row-fluid">
+					    	<% every_six_properties.each do |property| %>
 					          <div class="span2" style="margin-left:5px">
 
 								  <div class="thumbnail">
@@ -42,7 +56,12 @@
 						          	<p><%=  image_tag property.avatar.url(:medium) %></p>
 						          	<div class="caption">
 							          	<h5><%= property.title %></h5>
-							          	<p>Location:<%= property.location %></p>
+							          	<p>Loc
+
+
+
+
+							          	ation:<%= property.location %></p>
 							          	<p><span class="">$<%= property.price %></span></p>
 							          	<h4><% %></a></h4>
 							            
@@ -59,22 +78,12 @@
 					<% end %>
 				
 			
+				</div>
+			</div>
 		</div>
-	</div>
-	</div>
-
-	<div class="span3">
-    <div class="picture">
-     <ul class="nav nav-tabs nav-list nav-stacked">
-		<li class="nav-header">Categories</li>
-		<li><a href="/">Rent</a></li>
-		<li><a href="#">Sale</a></li>
-		<li><a href="#">Lease</a></li>
-		<li><a href="#">Others</a></li>
-			
-	 </ul>
- </div>
-  </div>
+	<div class="span2" style="background-color:#efefef; height:400px;">
+			    	
+	</div>	
 
 </div>
 

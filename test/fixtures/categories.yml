@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  serial: 1
+  description: MyString
 
 two:
   name: MyString
-  serial: 1
+  description: MyString

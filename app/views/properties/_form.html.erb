@@ -2,7 +2,7 @@
 
   <% if @property.errors.any? %>
     <div id="error_explanation">
-       <h2><%= pluralize(@property.errors.count, "error") %> prohibited this message from being saved:</h2>
+       <h2><%= pluralize(@property.errors.count, "error") %> Property could not be created</h2>
        <ul>
          <% @property.errors.full_messages do |msg| %>
          <% #Should have been: @location.errors.full_messages.each do |msg| %>

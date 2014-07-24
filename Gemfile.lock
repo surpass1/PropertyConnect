@@ -229,9 +229,6 @@ GEM
     warden (1.2.1)
       rack (>= 1.0)
     webrobots (0.1.1)
-    will_paginate (3.0.5)
-    will_paginate-bootstrap (1.0.0)
-      will_paginate (>= 3.0.3)
 
 PLATFORMS
   ruby
@@ -243,6 +240,7 @@ DEPENDENCIES
   devise
   elasticsearch-rails (~> 0.1.2)
   jquery-rails
+  kaminari
   mechanize
   nokogiri
   paperclip (~> 4.1.1)
@@ -260,5 +258,3 @@ DEPENDENCIES
   therubyracer
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
-  will_paginate
-  will_paginate-bootstrap

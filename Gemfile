@@ -17,8 +17,11 @@ gem 'mechanize'
 gem 'rest-client'
 gem 'paperclip', '~> 4.1.1'
 
-gem 'will_paginate'
-gem "will_paginate-bootstrap"
+#for pigination
+gem 'kaminari'
+
+# gem 'will_paginate'
+# gem "will_paginate-bootstrap"
 #gem 'paginate', '~> 3.0.0'
 #for the search engine
 gem 'elasticsearch-rails', '~> 0.1.2'

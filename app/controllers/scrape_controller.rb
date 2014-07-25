@@ -27,8 +27,8 @@ class ScrapeController < ApplicationController
   end
 
   def scrape_rent
-  	@scaper = Scraper.all
-  	@scaper = Scaper.where(:id>=0).order("id asc").page( params[:page]).per(12)
+  	#@scaper = Scraper.all
+  	@scaper = Scraper.order("location").page(params[:page]).per(12)
   end
 end
 

@@ -36,6 +36,9 @@ gem 'therubyracer'
 gem 'rails_admin'
 gem 'blogit'
 
+#rspec for unit testing
+gem 'rspec'
+
 #for searching 
 gem 'sunspot_rails'
 gem 'sunspot_solr' 

@@ -25,5 +25,10 @@ class ScrapeController < ApplicationController
   def make_absolute( href, root )
   	URI.parse(root).merge(URI.parse(href)).to_s
   end
+
+  def scrape_rent
+  	@scaper = Scraper.all
+  	@scaper = Scaper.where(:id>=0).order("id asc").page( params[:page]).per(12)
+  end
 end
 

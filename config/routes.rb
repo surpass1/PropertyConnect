@@ -5,7 +5,7 @@ PropertyConnect::Application.routes.draw do
 
   get "scrape/index"
 
-  get "scrape/soads"
+  get "scrape/scrape_rent"
   get "home/show"
 
   resources :categories

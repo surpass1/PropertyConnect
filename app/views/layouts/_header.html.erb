@@ -16,15 +16,15 @@
 	                            	<%= link_to "Home", root_path %>
 	                        </li>
 
-	                        <li class="<%= 'active' if current_page?(scrape_soads_path) %>">
-	                            	<%= link_to "Soads", scrape_soads_path %>
+	                        <li class="<%= 'active' if current_page?(scrape_scrape_rent_path) %>">
+	                            	<%= link_to "More", scrape_scrape_rent_path %>
 	                        </li>
 							<% if signed_in? %>
 								<li class="<%= 'active' if current_page?(properties_path) %>">
 	                               <%= link_to "Manage Property", properties_path %>
 	                            </li>
 
-	                            <li class="">
+	                            <li class="">	
 	                               <%= link_to "My account", profile_path(current_user.id), :method => :get %>
 	                            </li>
 	                            <li class="<%= 'active' if current_page?(destroy_user_session_path) %>">
@@ -87,7 +87,7 @@
 							<span class="text-right"></span>
 							
 							<p>
-								 <%= link_to "Check out new Houses and Land", root_path, :class => :btn %>
+								 <%= link_to "Check out new Houses and Land", scrape_scrape_rent_path, :class => :btn %>
 
 							</p>
 					

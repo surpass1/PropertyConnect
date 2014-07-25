@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     
-      @properties = Property.order("title").page(params[:page]).per(1)
+      @properties = Property.order("location").page(params[:page]).per(12)
       
       respond_to do |format|
         format.html # index.html.erb

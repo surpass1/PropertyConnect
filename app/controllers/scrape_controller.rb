@@ -29,6 +29,17 @@ class ScrapeController < ApplicationController
   def scrape_rent
   	#@scaper = Scraper.all
   	@scaper = Scraper.order("location").page(params[:page]).per(12)
+
+	respond_to do |format|
+	  format.html # index.html.erb
+	  format.json { render json: @scaper }
+	end
+  	# @search = Scraper.search do
+   #      fulltext params[:search]
+   #      paginate(page: params[:page])
+   #  end
+
+   #  @getfor = @search.results
   end
 end
 

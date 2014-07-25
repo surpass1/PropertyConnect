@@ -25,6 +25,6 @@ class Property < ActiveRecord::Base
     unless search.blank?
       conditions = ['location like ?', "%#{search}%"]
     end
-    paginate :per_page => 5, :page => page, :conditions => conditions, :order => 'location'
+    #paginate :per_page => 5, :page => page, :conditions => conditions, :order => 'location'
   end
 end

@@ -2,22 +2,68 @@
 
 
 	<div class="row-fluid">
-		<div class="span10">
-			<div class="row-fluid">
-				<div class="span3" style="margin-left:5px;">
-				    <ul class="nav nav-tabs nav-stacked">
-						<li class="nav-header">Categories</li>
-						<li><a href="/">Rent</a></li>
-						<li><a href="#">Sale</a></li>
-						<li><a href="#">Lease</a></li>
-						<li><a href="#">Others</a></li>
+		<div class="span2">
+			<ul class="nav nav-list">
+				<li class="nav-header"><font size="+1" color="blue">Categories</font></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						Sale
+					<b class="caret offset3"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/">Land </a></li>
+						<li><a href="#">House</a></li>
+						<li><a href="#">Other</a></li>
 					</ul>
-				 	
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						Rent
+					<b class="caret offset3"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/">Land </a></li>
+						<li><a href="#">House</a></li>
+						<li><a href="#">Other</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						Lease
+					<b class="caret offset2"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/">Land </a></li>
+						<li><a href="#">House</a></li>
+						<li><a href="#">Other</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					Others
+					<b class="caret offset2"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/">Surveying </a></li>
+						<li><a href="#">Architectural designings</a></li>
+						<li><a href="#">Building materials</a></li>
+						<li><a href="/">Renovating & Building</a></li>
+						<li><a href="#">Insurance companies experts</a></li>
+						<li><a href="#">Land registration (Buganda)</a></li>
+					</ul>
+				</li>
+					
+				</li>
+			</ul>
+
+
+		</div>
+		<div class="span8">
+			<div class="row-fluid">
+				<div class="span7" style="background-color:#efefef; height:210px;">
+			    	<%= image_tag( "phone.png", :size =>"100x100") %>
 			    </div>
-			    <div class="span5 well">
-			    	
-			    </div>
-				<div class="span3">
+				<div class="span5">
 					
 		            <div id="myCarousel" class="carousel slide fill">
 						<!-- Carousel items -->
@@ -49,7 +95,7 @@
 					    <% @properties.in_groups_of(5, false) do |every_six_properties| %>
 					    <div class="row-fluid">
 					    	<% every_six_properties.each do |property| %>
-					          <div class="span2" style="margin-left:5px">
+					          <div class="span3" style="margin-left:5px">
 
 								  <div class="thumbnail">
 								  	<i class="tag"></i>
@@ -81,9 +127,9 @@
 				</div>
 			</div>
 		</div>
-	<div class="span2">
-		<marquee><font size="+1" class="text-info">Advertise with us</font></marquee>
-		<div style="background-color:#efefef; height:400px;">
+		<div class="span2">
+			<marquee><font size="+1" color="blue">Advertise with us</font></marquee>
+			<div style="background-color:#efefef; height:400px;">
 			
 		</div>		    	
 	</div>	

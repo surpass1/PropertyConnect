@@ -68,7 +68,7 @@ class ProfileController < ApplicationController
 	  
 	  def destroy
 	    @profile = User.find(params[:id])
-	    @profile.destroy
+	    @profile.destroy_all
 
 	    respond_to do |format|
 	      format.html { redirect_to users_url }

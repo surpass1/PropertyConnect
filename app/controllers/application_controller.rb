@@ -14,10 +14,5 @@ class ApplicationController < ActionController::Base
 			end
 		end
 	end
-	# before_filter :configure_permitted_parameters, if: :devise_controller?
-
- #    protected
- #    	def configure_permitted_parameters
- #          	params.require(:user).permit(:name, :email, :password, :current_password, :is_female, :date_of_birth) 
- #        end
+	
 end

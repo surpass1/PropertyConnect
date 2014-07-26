@@ -20,6 +20,7 @@
 	                            	<%= link_to "More", scrape_scrape_rent_path %>
 	                        </li>
 							<% if signed_in? %>
+								Signed in as <%= image_tag @user.avatar.url(:thumb) %>. Role: <%= current_user.roles %> Not you? 
 								<li class="<%= 'active' if current_page?(properties_path) %>">
 	                               <%= link_to "Manage Property", properties_path %>
 	                            </li>

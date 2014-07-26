@@ -1,13 +1,13 @@
 class Ability
   include CanCan::Ability
-
+  
   def initialize(user)
     user ||= User.new # guest user 
     user.roles.each {|role| send(role) }
   end
   
   # Role Inheritance  
-  def unregistered  admin
+  def unregistered 
     can :read, :all
   end
 
@@ -19,7 +19,9 @@ class Ability
   
   def admin
     admin
-    can :access, :rails_admin
+    can :access, :rails_admin   # grant access to rails_admin
+    can :dashboard
+
   end
 
 end

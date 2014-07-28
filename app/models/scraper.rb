@@ -6,6 +6,7 @@ class Scraper < ActiveRecord::Base
    validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
    #validates_uniqueness_of :avatar
+   #validates_uniqueness_of :price
 
    #  searchable do
    #  	text  :location, :price,

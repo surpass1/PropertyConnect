@@ -1,4 +1,7 @@
 PropertyConnect::Application.routes.draw do
+  resources :my_properties
+
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   mount Blogit::Engine => "/blog"

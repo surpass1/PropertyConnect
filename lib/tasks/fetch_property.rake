@@ -22,6 +22,48 @@ namespace :scrape do
 		  property.save! 
 		end 
 	end
+	
+	task :jomayi => :environment do
+  #   	item_name= Array.new
+		# url = "http://www.jomayi.co.ug/"
+		# doc = Nokogiri::HTML(open(url))
+
+		# item_name = doc.xpath("//div/div/h2").collect {|node| node.text.strip}
+		# item_name.each do |name|
+		# 	puts name
+		# end
+
+		# property = Scraper.new(location: title)
+		# property.save
+
+  	end
+
+  	task :sema => :environment do
+    	puts "I have got sema"
+  	end
+
+  	task :national_housing => :environment do
+  		puts "national_housing"
+  #   	url = "http://www.nhcc.co.ug/"
+	 #  	doc = Nokogiri::HTML(open(url))
+		
+		# @title = []
+		# @price = []
+		# @image_url = []
+		# @image = []
+
+
+		# @title = doc.xpath("//div/h4").collect {|node| node.text.strip}
+		# @price = doc.css(".ns2-introtext").collect {|node| node.text.strip}
+		# @image_url = doc.css('.ns2-image').collect do |src|
+		
+		# end
+		# nhcc = Property.new(title: @title, price: @price)
+		# nhcc.save
+  	end
+
+  	task :property => [:knight_frank, :jomayi, :national_housing, :sema] do
+    	puts "I have done it"
+  	end
 
 end 
-

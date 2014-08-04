@@ -5,6 +5,7 @@ class CreateProperties < ActiveRecord::Migration
       t.string :location
       t.decimal :price
       t.string :description
+      t.status :status
 
       t.timestamps
     end

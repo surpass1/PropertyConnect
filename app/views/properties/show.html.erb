@@ -1,4 +1,4 @@
-<%- model_class = Property -%>
+  <%- model_class = Property -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
@@ -8,6 +8,8 @@
   <dd><%= @property.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
   <dd><%= @property.location %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:contact) %>:</strong></dt>
+  <dd><%= @property.contact %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @property.price %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>

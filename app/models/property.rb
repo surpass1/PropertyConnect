@@ -1,5 +1,5 @@
 class Property < ActiveRecord::Base
-  attr_accessible :description, :location, :price, :title, :avatar
+  attr_accessible :description, :location, :price, :title, :status, :contact, :avatar
   belongs_to :user
   belongs_to :property
 
@@ -11,6 +11,7 @@ class Property < ActiveRecord::Base
   validates :title, presence: true #, length: { :minimum => 4, :maximum => 20}
   validates :price, :numericality => {:only_integer => true}
   validates :description, presence: true
+  validates :contact, presence: true
 
 
   #paperclip for image upload

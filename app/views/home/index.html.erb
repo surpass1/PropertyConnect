@@ -5,54 +5,39 @@
 		<div class="span2">
 			<ul class="nav nav-list">
 				<li class="nav-header"><font size="+1" color="blue">Categories</font></li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						Sale
-					<b class="caret offset3"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="/">Land </a></li>
-						<li><a href="#">House</a></li>
-						<li><a href="#">Other</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						Rent
-					<b class="caret offset3"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="/">Land </a></li>
-						<li><a href="#">House</a></li>
-						<li><a href="#">Other</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						Lease
-					<b class="caret offset2"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="/">Land </a></li>
-						<li><a href="#">House</a></li>
-						<li><a href="#">Other</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-					Others
-					<b class="caret offset2"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="/">Surveying </a></li>
-						<li><a href="#">Architectural designings</a></li>
-						<li><a href="#">Building materials</a></li>
-						<li><a href="/">Renovating & Building</a></li>
-						<li><a href="#">Insurance companies experts</a></li>
-						<li><a href="#">Land registration (Buganda)</a></li>
-					</ul>
-				</li>
-					
+					<li class="dropdown-submenu">
+						<a tabindex="-1" href="#">Sale</a>
+						<ul class="dropdown-menu">
+							<li><%= link_to "Land", display_land_sale_path%></li>
+							<li><%= link_to "House"%></li>
+							<li><%= link_to "Other"%></li>
+						</ul>
+					</li>
+					<li class="dropdown-submenu">
+						<a tabindex="-1" href="#">Rent</a>
+						<ul class="dropdown-menu">
+							<li><a href="/">Land </a></li>
+							<li><a href="#">House</a></li>
+							<li><a href="#">Other</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-submenu">
+						<a tabindex="-1" href="#">Lease</a>
+						<ul class="dropdown-menu">
+							<li><a href="/">Land </a></li>
+							<li><a href="#">House</a></li>
+							<li><a href="#">Other</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown-submenu">
+						<a tabindex="-1" href="#">Other</a>
+						<ul class="dropdown-menu">
+							<li><a href="/">Land </a></li>
+							<li><a href="#">House</a></li>
+							<li><a href="#">Other</a></li>
+						</ul>
+					</li>
 				</li>
 			</ul>
 
@@ -102,12 +87,7 @@
 						          	<p><%=  image_tag property.avatar.url(:medium) %></p>
 						          	<div class="caption">
 							          	<h5><%= property.title %></h5>
-							          	<p>Loc
-
-
-
-
-							          	ation:<%= property.location %></p>
+							          	<p>Location:<%= property.location %></p>
 							          	<p><span class="">$<%= property.price %></span></p>
 							          	<h4><% %></a></h4>
 							            

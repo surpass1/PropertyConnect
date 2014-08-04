@@ -11,6 +11,8 @@ PropertyConnect::Application.routes.draw do
   get "scrape/scrape_rent"
   get "home/show"
 
+  get "home/make"
+
   resources :categories
 
   root :to => "home#index"
@@ -25,7 +27,9 @@ PropertyConnect::Application.routes.draw do
 
   get 'about', :to => 'home#about'
 
-  
+  get 'display/land_lease'
+  get 'display/land_rent'
+  get 'display/land_sale'
 
   
 

@@ -5,7 +5,7 @@ class PropertiesController < ApplicationController
 
   
   def index
-    @properties = Property.all
+    @properties = @user.properties.all
     # if params[:search]
     #   @properties = @user.properties.search(params[:search], params[:page]).order("created_at DESC")
       

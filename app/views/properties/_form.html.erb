@@ -17,9 +17,17 @@
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
       <%= f.select :title, options_for_select(["Land", "House", "other"]) %>
-      <%= f.text_field :title, :class => 'text_field' %>
+      
     </div>
   </div>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :status, options_for_select(["sale", "rent", "lease"]) %>
+      
+    </div>
+  </div>
+  
   <div class="control-group">
     <%= f.label :location, :class => 'control-label' %>
     <div class="controls">
@@ -32,6 +40,14 @@
       <%= f.text_field :price, :class => 'text_field' %>
     </div>
   </div>
+  <div class="control-group">
+    <%= f.label :contact, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :contact, :class => 'text_field' %>
+    </div>
+  </div>
+
+
   <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140728211901) do
+ActiveRecord::Schema.define(:version => 20140729050954) do
 
   create_table "blog_comments", :force => true do |t|
     t.string   "name",       :null => false
@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(:version => 20140728211901) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "status"
+    t.string   "contact"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

@@ -5,6 +5,11 @@ require "open-uri"
 
 namespace :scrape do
 
+	task :clean_table => :environment do
+    	property = Scraper.new
+    	property = Scraper.delete_all
+  	end
+
 	task :knight_frank => :environment do
 	   	uri = URI('http://search.knightfrank.ug/property-for-sale/uganda?buyrent=buy&viewall=true')
 		html = Net::HTTP.get(uri)
@@ -62,7 +67,7 @@ namespace :scrape do
 		# nhcc.save
   	end
 
-  	task :property => [:knight_frank, :jomayi, :national_housing, :sema] do
+  	task :property => [:clean_table, :knight_frank, :jomayi, :national_housing, :sema] do
     	puts "I have done it"
   	end
 

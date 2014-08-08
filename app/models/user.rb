@@ -29,4 +29,5 @@ class User < ActiveRecord::Base
   def is?(role)
     roles.include?(role.to_s)
   end
+   blogs
 end

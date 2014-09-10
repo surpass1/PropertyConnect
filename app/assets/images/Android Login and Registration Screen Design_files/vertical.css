@@ -1,0 +1,95 @@
+.wp_rp_wrap .related_post_title {
+	clear: both;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+div.wp_rp_content {
+	display: inline-block !important;
+}
+
+div.wp_rp_footer {
+	text-align: right !important;
+	overflow: hidden !important;
+}
+div.wp_rp_footer a {
+	color: #999 !important;
+	font-size: 11px !important;
+	text-decoration: none !important;
+	display: inline-block !important;
+}
+div.wp_rp_footer a.wp_rp_edit {
+	color: #fff !important;
+	font-size: 12px !important;
+	text-decoration: underline !important;
+	font-weight: bold !important;
+	background: #f79124 !important;
+	border-radius: 2px !important;
+	padding: 3px 6px;
+}
+ul.related_post {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+ul.related_post li {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1 !important;
+	*display: inline;
+	width: 150px;
+	margin: 10px 10px 10px 0px;
+	padding: 0;
+	background: none;
+}
+ul.related_post li a {
+	position: relative;
+	display: block;
+	font-size: 13px;
+	line-height: 1.6em;
+	text-decoration: none;
+	margin-bottom: 5px;
+	text-indent: 0;
+}
+ul.related_post li img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul.related_post li a img.wp_rp_santa_hat {
+	display: none !important;
+}
+
+ul.related_post li small {
+	font-size: 80%;
+}
+
+@media screen and (max-width: 480px) {
+	ul.related_post li {
+		display: block !important;
+		width: auto !important;
+		clear: both !important;
+	}
+	ul.related_post li a:nth-child(1) {
+		float: left !important;
+	}
+	ul.related_post li a:nth-child(2) {
+		font-size: 14px !important;
+		padding: 10px 0 10px 110px !important;
+		display: block !important;
+		height: 80px !important;
+	}
+	ul.related_post li img {
+		width: 100px !important;
+		height: 100px !important;
+	}
+}

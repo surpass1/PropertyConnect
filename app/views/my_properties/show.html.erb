@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @my_property.type %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @my_property.status %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @my_property.size %>
+</p>
+
+<p>
+  <b>Plot number:</b>
+  <%= @my_property.plot_number %>
+</p>
+
+<p>
+  <b>Village:</b>
+  <%= @my_property.village %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @my_property.price %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @my_property.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @my_property.phone %>
+</p>
+<p>
+  <%= image_tag @my_property.avatar.url(:thumb) %>
+</p>
+<%= link_to 'Edit', edit_my_property_path(@my_property) %> |
+<%= link_to 'Back', my_properties_path %>

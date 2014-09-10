@@ -1,0 +1,45 @@
+					<div class="row-fluid">
+						<div class = "span10">
+						 <ul>
+    
+							<%- model_class = Scraper -%>
+								
+							    <% @scaper.in_groups_of(5, false) do |every_six| %>
+							    
+							    	<% every_six.each do |scrape| %>
+							          <div class="span4" style="margin-left:6px">
+
+										  <div class="thumbnail" style="margin-left:0px;">
+										  	<i class="tag"></i>
+								          	<p><%=  image_tag scrape.avatar.url(:large) %></p>
+								          	
+								          	<div class="caption">
+									          	<h5><%= scrape.location %></h5>
+									          	<p><span class=""><%= scrape.price %></span></p>
+									          	    
+									            </b><%=scrape.description %>
+									        </div>
+									      </div>
+							            
+							          </div>
+
+							      <% end %>
+							<% end %>
+						</div>
+						<div class="span2" style="background-color:#efefef; height:200px;">
+							<marquee><font size="+1" color="blue">Advertise with us</font></marquee>
+							<div style="background-color:#efefef; height:400px;">
+								<%= image_tag( "phone.jpg", :size =>"200x100") %>
+								<%= image_tag( "phone.jpg", :size =>"200x100") %>
+								<%= image_tag( "phone.jpg", :size =>"200x100") %>
+								<%= image_tag( "phone.jpg", :size =>"200x100") %>
+								<%= image_tag( "phone.jpg", :size =>"200x100") %>
+							</div>
+
+					</div>
+					<div class="row-fluid">
+						<div class="span10" style="margin-left:30px">
+							<%= paginate @scaper%>
+						</div>
+					</div>
+					

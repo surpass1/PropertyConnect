@@ -29,6 +29,20 @@ namespace :scrape do
 	end
 	
 	task :jomayi => :environment do
+		uri = URI("http://www.jomayi.co.ug/")
+		html = Net::HTTP.get(uri)
+		document = Nokogiri::HTML(html)
+
+		document.css('div.sg_border')[10,10][0..10].each do |div|
+		  location = div.css('h3').text()
+		  image_url = URI(div.css('.accordion-image')[0].get_attribute(:src))
+		  price = div.css('p').text()
+
+		  #create a new property
+		  property = Scraper.new(location: location, price: price, description: location)
+		  property.avatar = image_url
+		  property.save! 
+		end 
   #   	item_name= Array.new
 		# url = "http://www.jomayi.co.ug/"
 		# doc = Nokogiri::HTML(open(url))
@@ -49,15 +63,9 @@ namespace :scrape do
 
   	task :national_housing => :environment do
   		puts "national_housing"
-  #   	url = "http://www.nhcc.co.ug/"
-	 #  	doc = Nokogiri::HTML(open(url))
+    	url = "http://www.nhcc.co.ug/"
+	  	doc = Nokogiri::HTML(open(url))
 		
-		# @title = []
-		# @price = []
-		# @image_url = []
-		# @image = []
-
-
 		# @title = doc.xpath("//div/h4").collect {|node| node.text.strip}
 		# @price = doc.css(".ns2-introtext").collect {|node| node.text.strip}
 		# @image_url = doc.css('.ns2-image').collect do |src|

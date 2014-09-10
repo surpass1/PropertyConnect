@@ -33,6 +33,7 @@ class ScrapeController < ApplicationController
 	respond_to do |format|
 	  format.html # index.html.erb
 	  format.json { render json: @scaper }
+	  format.xml { render xml: @scaper }
 	end
   	# @search = Scraper.search do
    #      fulltext params[:search]

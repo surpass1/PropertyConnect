@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  status: MyString
+  size: MyString
+  plot_number: MyString
+  village: MyString
+  price: 9.99
+  email: MyString
+  phone: 1
+
+two:
+  type: 
+  status: MyString
+  size: MyString
+  plot_number: MyString
+  village: MyString
+  price: 9.99
+  email: MyString
+  phone: 1

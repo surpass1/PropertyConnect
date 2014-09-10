@@ -1,0 +1,53 @@
+<%= form_for(@my_property) do |f| %>
+  <% if @my_property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@my_property.errors.count, "error") %> prohibited this my_property from being saved:</h2>
+
+      <ul>
+      <% @my_property.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.select :type, options_for_select(["Land", "House", "other"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.select :status, options_for_select(["Rent", "Sale", "Lease"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :plot_number %><br />
+    <%= f.text_field :plot_number %>
+  </div>
+  <div class="field">
+    <%= f.label :village %><br />
+    <%= f.text_field :village %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.number_field :phone %>
+  </div>
+  <div class="field">
+   <%= f.label :Image%>
+      <%= f.file_field :avatar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
